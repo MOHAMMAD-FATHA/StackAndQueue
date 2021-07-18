@@ -1,6 +1,5 @@
 package StackandQueueJava;
 
-
 /*
  * @author Mohammad Fatha
  * Purpose to create a stack using linked list
@@ -41,37 +40,34 @@ public class Stack {
 	}
 
 	// Utility function to check if the stack is empty or not
-    public boolean isEmpty()
-    {
-        return top == null;
-    }
- 
-    // Utility function to return top element in a stack
-    public int peek()
-    {
-        // check for empty stack
-        if (!isEmpty()) {
-            return top.data;
-        }
-        else {
-            System.out.println("Stack is empty");
-            return -1;
-        }
-    }
-    
- // Utility function to pop top element from the stack
-    public void pop() // remove at the beginning
-    {
-        // check for stack underflow
-        if (top == null) {
-            System.out.print("\nStack Underflow");
-            return;
-        }
- 
-        // update the top pointer to point to the next node
-        top = (top).next;
-    }
- 
+	public boolean isEmpty() {
+		return top == null;
+	}
+
+	// Utility function to return top element in a stack
+	public int peek() {
+		// check for empty stack
+		if (!isEmpty()) {
+			return top.data;
+		} else {
+			System.out.println("Stack is empty");
+			return -1;
+		}
+	}
+
+	// Utility function to pop top element from the stack
+	public void pop() // remove at the beginning
+	{
+		// check for stack underflow
+		if (top == null) {
+			System.out.print("\nStack Underflow");
+			return;
+		}
+
+		// update the top pointer to point to the next node
+		top = (top).next;
+	}
+
 	public void display() { // print method
 		Node temp = top;
 		while (temp != null) {
@@ -92,22 +88,22 @@ public class Stack {
 		stack.push(30);
 		stack.push(56);
 		stack.display();
-		
+
 		// print Top element of Stack
 		System.out.println();
 		stack.pop();
 		stack.display();
 		System.out.printf("\nTop element is %d\n", stack.peek());
-		
+
 		System.out.println();
 		stack.pop();
 		stack.display();
-        System.out.printf("\nTop element is %d\n", stack.peek());
-        
-        System.out.println();
+		System.out.printf("\nTop element is %d\n", stack.peek());
+
+		System.out.println();
 		stack.pop();
 		stack.display();
-        System.out.printf("\nTop element is %d\n", stack.peek());
+		System.out.printf("\nTop element is %d\n", stack.peek());
 	}
 
 }
