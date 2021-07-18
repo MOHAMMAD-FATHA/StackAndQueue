@@ -31,7 +31,7 @@ public class Queue {
 			rear.next = new Node(data);
 			rear = rear.next;
 		}
-
+		
 		length++;
 
 	}
